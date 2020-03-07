@@ -14,3 +14,7 @@ class GeneratePDF(View):
             response = HttpResponse(pdf, content_type='application/pdf')
             return response
         return HttpResponse("Not Found")
+
+def index(request):
+    template = 'template.html'
+    return render(request, template)

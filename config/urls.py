@@ -15,10 +15,10 @@ Including another URLconf
 """
 from django.contrib import admin
 from django.urls import path
-from rendertopdf.views import GeneratePDF
+from rendertopdf.views import GeneratePDF, index
 
 urlpatterns = [
     path('admin/', admin.site.urls),
     path('pdf/', GeneratePDF.as_view()),
-
+    path('', index),
 ]
